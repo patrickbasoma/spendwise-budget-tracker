@@ -1,0 +1,124 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+#main-header {
+    background-color: #164e63;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+#main-header img {
+    vertical-align: middle;
+}
+
+#main-header h1 {
+    display: inline-block;
+}
+
+.add-expense-section,
+.expenses-section,
+.instructions-section,
+.video-section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.expense-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-expense-section > form {
+    max-width: 500px;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+input:focus, select:focus {
+    outline: 2px solid #0891b2;
+    border-color: #0891b2;
+}
+
+input:not([type="submit"]) {
+    background-color: #fafafa;
+}
+
+button {
+    background-color: #087f5b;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #065f46;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+thead {
+    background-color: #164e63;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e8f1f5;
+}
+
+tbody tr:hover {
+    background-color: #cce5ff;
+}
+
+.expenses-section td {
+    font-size: 14px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    color: #164e63;
+}
+
+iframe {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #164e63;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+}

@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget & Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png"
+             alt="Budget tracker logo" width="65">
+        <h1>Personal Budget & Expense Tracker</h1>
+        <p>Manage your money. Track your expenses. Save more.</p>
+    </header>
+
+    <section class="add-expense-section">
+        <h2>Add a New Expense</h2>
+
+        <form class="expense-form">
+            <label for="expense-name">Expense Name:</label>
+            <input type="text" id="expense-name" placeholder="Enter expense name">
+
+            <label for="expense-amount">Amount (KSh):</label>
+            <input type="number" id="expense-amount" placeholder="Enter amount">
+
+            <label for="expense-category">Category:</label>
+            <select id="expense-category">
+                <option value="">Select Category</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Rent">Rent</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="expense-date">Expense Date:</label>
+            <input type="date" id="expense-date">
+
+            <button type="button">Add Expense</button>
+        </form>
+    </section>
+
+    <section class="expenses-section">
+        <h2>My Expenses</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Amount (KSh)</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Food Shopping</td>
+                    <td>1,500</td>
+                    <td>Food</td>
+                    <td>2026-11-01</td>
+                </tr>
+                <tr>
+                    <td>Bus Fare</td>
+                    <td>300</td>
+                    <td>Transport</td>
+                    <td>2026-11-02</td>
+                </tr>
+                <tr>
+                    <td>House Rent</td>
+                    <td>5,000</td>
+                    <td>Rent</td>
+                    <td>2026-11-03</td>
+                </tr>
+                <tr>
+                    <td>Movie</td>
+                    <td>500</td>
+                    <td>Entertainment</td>
+                    <td>2026-11-03</td>
+                </tr>
+                <tr>
+                    <td>Shopping</td>
+                    <td>800</td>
+                    <td>Other</td>
+                    <td>2026-11-04</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="instructions-section">
+        <details>
+            <summary>How to Use This Tracker</summary>
+            <p>1. Enter the name of your expense.</p>
+            <p>2. Enter the amount spent.</p>
+            <p>3. Select the correct expense category.</p>
+            <p>4. Choose the expense date.</p>
+            <p>5. Click the Add Expense button.</p>
+            <p>6. Review your expenses in the table.</p>
+            <p>Note: The button will become functional when we add JavaScript.</p>
+        </details>
+    </section>
+
+    <section class="video-section">
+        <h2>Learn How to Manage Your Budget</h2>
+        <p>Watch this video to learn basic budgeting skills.</p>
+
+        <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/-vVp185Sq24"
+            title="Budgeting for Beginners"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Personal Budget & Expense Tracker. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
