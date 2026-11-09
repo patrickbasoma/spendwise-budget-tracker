@@ -1,155 +1,73 @@
 
-# SpendWise Dashboard
+# SpendWise - Personal Budget and Expense Tracker
 
 ## Project Description
-SpendWise is a Personal Budget and Expense Tracker dashboard
-designed to help users organize and monitor their finances.
 
-This project focuses on building a modern, clean, and responsive
-dashboard using HTML5 and CSS3.
+SpendWise is a personal budgeting and expense tracking application developed using HTML, CSS, and JavaScript.
 
-## Features
+The application helps users manage their monthly budgets, record daily expenses, calculate total spending, and monitor their remaining budget.
 
-- Sidebar navigation menu.
-- Dashboard header and user profile.
-- Three financial summary cards.
-- Six expense category cards.
-- Recent transactions table.
-- Responsive layout for mobile and desktop.
-- CSS Grid and Flexbox layouts.
-- Hover and keyboard focus animations.
-- CSS custom properties for color themes.
-- Automatic dark theme support.
+## Improvements Made This Week
+
+This week, SpendWise was improved by adding JavaScript functionality to make the application interactive.
+
+Users can now:
+- Set a monthly budget.
+- Add new expenses.
+- Select expense categories.
+- View expense records in a table.
+- Calculate total expenses automatically.
+- View the number of recorded expenses.
+- Check their remaining budget.
+- Delete expense records.
+- Receive budget warnings.
+
+## JavaScript Concepts Implemented
+
+### 1. Conditional Statements
+
+I used if, else if, and else statements to check budget conditions and provide feedback to users when they exceed or approach their monthly budget.
+
+### 2. Arrays
+
+I used a JavaScript array called expenses to store multiple expense records as objects containing the expense name, amount, category, and date.
+
+### 3. Loops
+
+I used a for loop to calculate total expenses and forEach() to display all expense records in the HTML table.
+
+### 4. DOM Manipulation
+
+I used document.getElementById(), createElement(), and textContent to select and update HTML elements dynamically.
+
+### 5. Event Listeners
+
+I used addEventListener() to handle form submissions, budget button clicks, and expense deletion.
+
+## How the Application Works
+
+Users enter their monthly budget and add expense details through the form.
+
+JavaScript processes the information, stores each expense in an array, calculates totals, and updates the dashboard automatically.
+
+Conditional statements check spending against the monthly budget and display appropriate feedback.
+
+## Challenges Encountered and Solutions
+
+1. Connecting JavaScript to HTML: I resolved this by using matching element IDs.
+2. Calculating total expenses: I used loops to process all expense records.
+3. Preventing page refresh: I used preventDefault() when submitting the expense form.
+4. Updating expense records: I used DOM manipulation to display and delete records dynamically.
+5. Budget monitoring: I used conditional statements to provide budget warnings.
 
 ## Technologies Used
 
 - HTML5
 - CSS3
-- CSS Grid
-- Flexbox
-- CSS Variables
-- Media Queries
-
-## Project Structure
-
-budget-tracker/
-|
-|-- index.html
-|-- style.css
-|-- README.md
-
-## What Each File Does
-
-### index.html
-Provides the dashboard structure, navigation,
-financial cards, and transaction table.
-
-### style.css
-Controls the dashboard design, colors, layout,
-responsiveness, animations, and dark theme.
-
-### README.md
-Explains the project, its features, and technologies used.
-
-## Learning Outcomes
-
-Through this project, I practiced:
-- Building layouts with CSS Grid.
-- Arranging elements using Flexbox.
-- Creating responsive web pages.
-- Using CSS custom properties.
-- Adding hover and keyboard focus effects.
-
-## Author
-Patrick Basoma
-
-## Project Name
-SpendWise Personal Budget & Expense Tracker
-
-# Personal Budget & Expense Tracker
-
-## Project Description
-
-The Personal Budget & Expense Tracker is a simple website
-designed to help users record, organise, and monitor their
-daily expenses.
-
-The project uses HTML to structure the webpage and CSS
-to improve its appearance and responsiveness.
-
-## Project Files
-
-### 1. index.html
-
-This file contains the structure of the Budget Tracker.
-
-It includes:
-- Main heading and logo.
-- Add Expense form.
-- Expense category dropdown.
-- Expense table with five sample records.
-- Budget instructions using details and summary.
-- Embedded YouTube video.
-- Footer section.
-
-### 2. style.css
-
-This file controls the appearance and layout of the website.
-
-It includes:
-- Background colours and text styling.
-- Form and button styling.
-- Expense table borders and alternating row colours.
-- Hover and focus effects.
-- Advanced CSS selectors.
-- Responsive design.
-- Dark theme support.
-
-### 3. README.md
-
-This file explains the purpose of the project,
-its structure, and the technologies used.
-
-## HTML Concepts Implemented
-
-- HTML tables: table, thead, tbody, tr, th and td.
-- HTML forms and input elements.
-- Select dropdown with five expense categories.
-- Image element.
-- YouTube iframe.
-- Details and summary elements.
-- Labels and matching input IDs.
-
-## CSS Concepts Implemented
-
-- CSS selectors.
-- Descendant selectors.
-- Direct child selectors.
-- nth-child pseudo-class.
-- Negation pseudo-class.
-- Focus and hover pseudo-classes.
-- Table styling.
-- Responsive design.
-- Dark theme using prefers-color-scheme.
-
-## Technologies Used
-
-- HTML5
-- CSS3
+- JavaScript
 - Visual Studio Code
 - Git and GitHub
 
-## How to Run the Project
-
-1. Download or clone the project repository.
-2. Open the project folder.
-3. Open index.html in Google Chrome.
-4. Explore the expense form, table, and other sections.
-
 ## Conclusion
 
-This project demonstrates my understanding of HTML
-tables, forms, multimedia elements, and advanced CSS
-selectors. It builds on my Week 1 Budget Tracker project
-and prepares the foundation for future JavaScript
-functionality.
+This project helped me understand how JavaScript makes webpages interactive through arrays, loops, conditional statements, DOM manipulation, and event listeners.

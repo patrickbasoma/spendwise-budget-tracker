@@ -1,201 +1,120 @@
+<main class="dashboard">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A simple personal budget and expense tracker">
-    <title>Personal Budget & Expense Tracker</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <h1>SpendWise Dashboard</h1>
+    <p>Manage your income and expenses wisely.</p>
 
-    <!-- Main Header -->
-    <header id="main-header">
-        <img
-            src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png"
-            alt="Budget tracker logo"
-            width="65"
+    <!-- Budget Section -->
+    <section class="budget-section">
+        <h2>Monthly Budget</h2>
+
+        <input
+            type="number"
+            id="budgetInput"
+            placeholder="Enter your monthly budget"
+            min="0"
         >
-        <div>
-            <h1>My Budget Tracker</h1>
-            <p>Manage your money. Track your expenses. Save more.</p>
+
+        <button type="button" id="setBudgetBtn">
+            Set Budget
+        </button>
+
+        <p id="budgetStatus">Set your budget to get started.</p>
+    </section>
+
+    <!-- Summary Section -->
+    <section class="summary">
+
+        <div class="card">
+            <h3>Total Expenses</h3>
+            <p id="totalExpenses">KSh 0.00</p>
         </div>
-    </header>
 
-    <main>
+        <div class="card">
+            <h3>Number of Expenses</h3>
+            <p id="expenseCount">0</p>
+        </div>
 
-        <!-- Add Expense Section -->
-        <section class="add-expense-section">
-            <h2>Add New Expense</h2>
+        <div class="card">
+            <h3>Remaining Budget</h3>
+            <p id="remainingBudget">KSh 0.00</p>
+        </div>
 
-            <form class="expense-form" action="#" method="post">
+    </section>
 
-                <div class="form-group">
-                    <label for="expense-name">Expense Name:</label>
-                    <input
-                        type="text"
-                        id="expense-name"
-                        name="expense-name"
-                        placeholder="Enter expense name"
-                        required
-                    >
-                </div>
+    <!-- Expense Form -->
+    <section class="expense-form">
 
-                <div class="form-group">
-                    <label for="expense-amount">Amount (KSH):</label>
-                    <input
-                        type="number"
-                        id="expense-amount"
-                        name="expense-amount"
-                        placeholder="Enter amount"
-                        min="1"
-                        step="0.01"
-                        required
-                    >
-                </div>
+        <h2>Add New Expense</h2>
 
-                <div class="form-group">
-                    <label for="expense-category">Category:</label>
-                    <select
-                        id="expense-category"
-                        name="expense-category"
-                        required
-                    >
-                        <option value="">Select Category</option>
-                        <option value="Food">Food</option>
-                        <option value="Transport">Transport</option>
-                        <option value="Rent">Rent</option>
-                        <option value="Entertainment">Entertainment</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
+        <form id="expenseForm">
 
-                <div class="form-group">
-                    <label for="expense-date">Expense Date:</label>
-                    <input
-                        type="date"
-                        id="expense-date"
-                        name="expense-date"
-                        required
-                    >
-                </div>
+            <label for="expenseName">Expense Name</label>
+            <input
+                type="text"
+                id="expenseName"
+                placeholder="e.g. Transport"
+                required
+            >
 
-                <button type="button" id="add-expense-btn">
-                    Add Expense
-                </button>
+            <label for="expenseAmount">Amount (KSh)</label>
+            <input
+                type="number"
+                id="expenseAmount"
+                min="0.01"
+                step="0.01"
+                placeholder="Enter amount"
+                required
+            >
 
-            </form>
-        </section>
+            <label for="expenseCategory">Category</label>
+            <select id="expenseCategory" required>
+                <option value="">Select Category</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Bills">Bills</option>
+                <option value="Education">Education</option>
+                <option value="Other">Other</option>
+            </select>
 
-        <!-- Expenses Table Section -->
-        <section class="expenses-section" id="expenses-list">
-            <h2>Your Expenses</h2>
+            <label for="expenseDate">Date</label>
+            <input
+                type="date"
+                id="expenseDate"
+                required
+            >
 
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Amount (KSH)</th>
-                            <th>Category</th>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
+            <button type="submit">Add Expense</button>
 
-                    <tbody>
-                        <tr>
-                            <td>Groceries</td>
-                            <td>2,500</td>
-                            <td>Food</td>
-                            <td>2026-11-01</td>
-                        </tr>
+        </form>
 
-                        <tr>
-                            <td>Bus Fare</td>
-                            <td>500</td>
-                            <td>Transport</td>
-                            <td>2026-11-02</td>
-                        </tr>
+        <p id="message"></p>
 
-                        <tr>
-                            <td>House Rent</td>
-                            <td>5,000</td>
-                            <td>Rent</td>
-                            <td>2026-11-03</td>
-                        </tr>
+    </section>
 
-                        <tr>
-                            <td>Movie Ticket</td>
-                            <td>800</td>
-                            <td>Entertainment</td>
-                            <td>2026-11-04</td>
-                        </tr>
+    <!-- Expense Records -->
+    <section class="expense-records">
 
-                        <tr>
-                            <td>Mobile Airtime</td>
-                            <td>200</td>
-                            <td>Other</td>
-                            <td>2026-11-05</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+        <h2>Expense History</h2>
 
-        <!-- Instructions Section -->
-        <section class="instructions-section">
-            <details>
-                <summary>How to Use This Tracker</summary>
+        <table>
+            <thead>
+                <tr>
+                    <th>Expense</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
 
-                <p>
-                    1. Enter the name of your expense.
-                </p>
-                <p>
-                    2. Enter the amount spent in KSH.
-                </p>
-                <p>
-                    3. Select an expense category.
-                </p>
-                <p>
-                    4. Select the date of the expense.
-                </p>
-                <p>
-                    5. Click Add Expense. The button is a visual placeholder
-                    for now; JavaScript functionality will be added later.
-                </p>
-            </details>
-        </section>
+            <tbody id="expenseList">
+                <!-- JavaScript will display expenses here -->
+            </tbody>
+        </table>
 
-        <!-- Budget Education Video -->
-        <section class="video-section">
-            <h2>Learn How to Manage Your Money</h2>
+    </section>
 
-            <p>
-                Watch this video to learn more about budgeting
-                and managing personal expenses.
-            </p>
+</main>
 
-            <div class="video-container">
-                <iframe
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/2V3CfD8TPac"
-                    title="Personal budgeting tips"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 My Budget Tracker. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+<script src="script.js" defer></script>

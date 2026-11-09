@@ -262,3 +262,97 @@ footer {
         border-color: #65788a;
     }
 }
+
+/* Interactive SpendWise Elements */
+
+.budget-section,
+.expense-form,
+.expense-records {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.card {
+    background-color: #eaf4ff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.expense-form form {
+    display: grid;
+    gap: 10px;
+}
+
+.expense-form input,
+.expense-form select,
+.budget-section input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.expense-form button,
+.budget-section button {
+    padding: 12px;
+    background-color: #176b45;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.expense-form button:hover,
+.budget-section button:hover {
+    background-color: #105333;
+}
+
+.expense-records table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.expense-records th,
+.expense-records td {
+    padding: 12px;
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#budgetStatus,
+#message {
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+@media (max-width: 600px) {
+    .expense-records {
+        overflow-x: auto;
+    }
+
+    .expense-records table {
+        min-width: 550px;
+    }
+}
+
